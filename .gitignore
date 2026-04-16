@@ -54,6 +54,7 @@ models/
 *.json
 !pyproject.toml
 !ensemble_weights.json
+!requirements.txt
 
 # Environment variables
 .env
