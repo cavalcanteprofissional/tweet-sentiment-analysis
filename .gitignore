@@ -27,11 +27,10 @@ ENV/
 
 # Poetry
 poetry.lock
-.venv/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
+!notebooks/*.ipynb
 
 # IDE
 .vscode/
@@ -55,3 +54,6 @@ models/
 *.json
 !pyproject.toml
 !ensemble_weights.json
+
+# Environment variables
+.env
