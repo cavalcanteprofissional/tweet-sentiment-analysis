@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "pln-analysis"
+version = "0.1.0"
+description = "Ensemble de modelos transformer para análise de sentimento em tweets"
+authors = ["Seu Nome <seu@email.com>"]
+readme = "README.md"
+packages = [{include = "src", from = "."}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+transformers = "^4.40.0"
+datasets = "^2.19.0"
+torch = "^2.3.0"
+scikit-learn = "^1.4.2"
+pandas = "^2.2.2"
+matplotlib = "^3.8.4"
+seaborn = "^0.13.2"
+huggingface-hub = "^0.23.0"
+tqdm = "^4.66.4"
+streamlit = "^1.36.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+black = "^24.4.2"
+flake8 = "^7.0.0"
+ipykernel = "^6.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pln-analysis = "src.main:main"
