@@ -5,8 +5,8 @@
 
 | # | Nome | Email |
 |---|------|-------|
-| 1 | Lucas Cavalcante dos Santos | cavalcantesidi@outlook.com |
-| 2 | George Lucas Lopes | 
+| 1 | George Lucas Lopes da Silva Gomes | |
+| 2 | Lucas Cavalcante dos Santos | cavalcantesidi@outlook.com |
 | 3 | Raylson Silva de Lima | raylson.ifce@gmail.com |
 | 4 | Sthefferson Bruno Costa Ferreira | sthefferson.ufma@gmail.com |
 
