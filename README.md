@@ -18,11 +18,25 @@ O sistema classifica tweets em três categorias:
 
 ## 🏗️ Arquitetura
 
+```mermaid
+graph LR
+    A([📝 Tweet]) --> B[🧹 Preprocessor]
+    B --> C[🤖 RoBERTa]
+    B --> D[🤖 BERTweet]
+    B --> E[🤖 DistilBERT]
+    C --> F{⚖️ Ensemble}
+    D --> F
+    E --> F
+    F --> G([😊/😐/😟 Sentimento])
 ```
-Tweet → Limpeza → [RoBERTa] ─┐
-                 [BERTweet] ─┼─ Weighted Soft Voting → Sentimento
-                 [DistilBERT]─┘
-```
+
+**Fluxo do Pipeline:**
+
+1. **Entrada** → Tweet de texto
+2. **Preprocessing** → Limpeza (URLs, menções, hashtags)
+3. **3 Modelos** → Predição paralela
+4. **Ensemble** → Weighted soft voting
+5. **Saída** → Sentimento final
 
 **3 Modelos Combinados:**
 1. **RoBERTa Twitter** (125M) — Treinado em 58M tweets
@@ -135,7 +149,3 @@ pytest tests/
 ## 📚 Licença
 
 MIT License
-
----
-
-Feito com ❤️ para a disciplina Python em Projetos de IA
