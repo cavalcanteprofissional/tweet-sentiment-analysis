@@ -1,5 +1,9 @@
 """Streamlit App - Interface para demonstração do ensemble"""
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import streamlit as st
 from src.ensemble import ensemble_predict, DEFAULT_WEIGHTS
 from src.models import load_pipelines
